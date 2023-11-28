@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                x:Name="Image_Upload" 
+                HeightRequest="400"
+                WidthRequest="400"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="DataSql"
+                Text="Ingresa la sección mediante el INE"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="confidenceLabel"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="resultLabel"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Editor
+                x:Name="seccion"
+                Keyboard="Numeric"
+                MaxLength="4"
+                WidthRequest="500"
+                Placeholder="Sección"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Switch 
+                x:Name="entorno"
+                IsToggled="False"/>
+            <Button
+                Text="Obtener INE/IFE" 
+                Clicked="UploadImagen_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="Guardar"
+                Text="Guardar" 
+                Clicked="Guardar_Info"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
